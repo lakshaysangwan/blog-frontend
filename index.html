@@ -3,6 +3,7 @@
 
 <head>
     <title>LKshy</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
@@ -11,11 +12,7 @@
     <script src="pages/home/home.js"></script>
 </head>
 
-<body>
-    <a ng-href="#!/home">Home</a>
-    <a ng-href="#!/about">About</a>
-
-    <div ng-view></div>
+<body ng-view>
 </body>
 
 </html>
