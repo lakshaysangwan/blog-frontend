@@ -2,16 +2,20 @@
 <html ng-app="myApp">
 
 <head>
-    <title>My AngularJS App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>LKshy</title>
+    <link rel="stylesheet" href="style.css">
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
+    <script src="pages/about/about.js"></script>
+    <script src="pages/home/home.js"></script>
 </head>
 
 <body>
-    <div ng-controller="MainController">
-        <h1>{{ helloMessage }}</h1>
-    </div>
+    <a ng-href="#!/home">Home</a>
+    <a ng-href="#!/about">About</a>
+
+    <div ng-view></div>
 </body>
 
 </html>

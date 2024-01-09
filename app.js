@@ -1,5 +1,16 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
 
-app.controller('MainController', function ($scope) {
-    $scope.helloMessage = "Hello, AngularJS!";
-});
+app.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'pages/home/home.html',
+            controller: 'HomeController'
+        })
+        .when('/about', {
+            templateUrl: 'pages/about/about.html',
+            controller: 'AboutController'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+}]);
