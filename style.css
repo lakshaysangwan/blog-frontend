@@ -1,0 +1,52 @@
+:root {
+  /* Color scheme for light mode */
+  --background-color: white;
+  --text-color: black;
+  --navbar-link-color: black;
+  --navbar-link-hover-color: #0056b3; /* Adjust hover color for light mode */
+  --toggle-icon-color: blue;
+
+  /* Transition for smooth color change */
+  --transition-duration: 0.3s;
+}
+
+body.dark-mode {
+  /* Color scheme for dark mode */
+  --background-color: black;
+  --text-color: white;
+  --navbar-link-color: white;
+  --navbar-link-hover-color: #4da6ff; /* Adjust hover color for dark mode */
+  --toggle-icon-color: yellow;
+}
+
+* {
+  font-family: poppins;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-duration),
+    color var(--transition-duration);
+}
+
+#dark-mode-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.navbar-brand {
+  color: var(--navbar-link-color);
+  transition: color var(--transition-duration);
+}
+
+.navbar-brand:hover {
+  color: var(--navbar-link-hover-color);
+  text-decoration: none; /* Optional: removes underline on hover */
+}
+
+.fa-sun {
+  color: var(--toggle-icon-color);
+  transition: color var(--transition-duration);
+}
