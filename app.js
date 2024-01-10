@@ -12,6 +12,14 @@ app.config([
         templateUrl: "pages/about/about.html",
         controller: "AboutController",
       })
+      .when("/signin", {
+        templateUrl: "pages/signin/signin.html",
+        controller: "SigninController",
+      })
+      .when("/signup", {
+        templateUrl: "pages/signup/signup.html",
+        controller: "SignupController",
+      })
       .otherwise({
         redirectTo: "/",
       });
